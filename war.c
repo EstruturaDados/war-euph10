@@ -57,7 +57,7 @@ void atacar(Territorio *atacante, Territorio *defensor)
         srand(time(NULL));
 
          printf("===================================\n");
-         printf("WAR ESTTRUTURADO - CADASTRO INICIAL\n");
+         printf("WAR ESTRUTURADO - CADASTRO INICIAL\n");
          printf("===================================\n");
 
          // QUANTIDADE DE TERRITÓRIOS
@@ -89,7 +89,9 @@ void atacar(Territorio *atacante, Territorio *defensor)
             getchar();
            }
 
-
+            while (1)
+            {
+                
             printf("===================================\n");
             printf("MAPA DO MUNDO - ESTADO ATUAL \n");
             printf("===================================\n");
@@ -104,8 +106,6 @@ void atacar(Territorio *atacante, Territorio *defensor)
                        territorios[i].cor,
                        territorios[i].tropas);
             }
-            
-            printf("------------------------------------\n");
 
             // ESCOLHA DOS TERRITÓRIOS.
             int atacante;
@@ -121,6 +121,7 @@ void atacar(Territorio *atacante, Territorio *defensor)
              if (atacante == 0)
             {
                 printf("Saindo do jogo...\n");
+                break;
             } 
             else
             {
@@ -130,6 +131,7 @@ void atacar(Territorio *atacante, Territorio *defensor)
             if (defensor == 0)
             {
                 printf("Saindo do jogo...\n");
+                break;
             }
             else
             {
@@ -153,21 +155,11 @@ void atacar(Territorio *atacante, Territorio *defensor)
             }
         }
 
-               //EXIBIÇÃO APÓS O ATAQUE.
-               printf("===================================\n");
-               printf("MAPA DO MUNDO - ESTADO FINAL\n");
-               printf("===================================\n");
+                printf("Pressione enter para o proximo turno...");
+                getchar();
+                getchar();
+    }
 
-               
-            for (int i = 0; i < quantidade; i++) {
-                
-                 printf("[%d] %s (Exercito %s, Tropas %d)\n",
-                        i + 1,
-                        territorios[i].nome,
-                        territorios[i].cor,
-                        territorios[i].tropas);
-            }
-     
             //LIBERAÇÃO DE MEMÓRIA.
             liberarMemoria(territorios);
 
