@@ -10,6 +10,9 @@ typedef struct {
     int tropas;
 } Territorio; 
 
+// --- Protótipos das Funções ---
+// Declarar as finções aqui permite que a main as chame antes de ssuas definições.
+
 // FUNÇÃO RESPONSÁVEL POR REALIZAR O ATAQUE.
 void atacar(Territorio *atacante, Territorio *defensor)
 {
@@ -50,6 +53,29 @@ void atacar(Territorio *atacante, Territorio *defensor)
     {
         free(mapa);
     }
+
+
+    char* Missoes [5] = {
+        "Conquistar 3 territorios seguidos",
+        "Conquistar 2 territorios seguidos",
+        "Conquiste pelo menos 1 terriotorio",
+        "Conquiste 2 territorios",
+        "conquiste 4 territorios seguidos"
+    };
+
+void atribuirMissao(char* Destino, char*Missoes[], int totalMissoes)
+{
+     int totalMissoes;
+
+     int totalMissoes = rand() %5 + 1;
+
+}
+    
+
+    
+   
+
+
 
        // INICIANDO A FUNÇÃO PRINCIPAL.
        int main() {
