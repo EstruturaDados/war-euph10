@@ -10,9 +10,6 @@ typedef struct {
     int tropas;
 } Territorio; 
 
-// --- Protótipos das Funções ---
-// Declarar as finções aqui permite que a main as chame antes de ssuas definições.
-
 // FUNÇÃO RESPONSÁVEL POR REALIZAR O ATAQUE.
 void atacar(Territorio *atacante, Territorio *defensor)
 {
@@ -54,27 +51,6 @@ void atacar(Territorio *atacante, Territorio *defensor)
         free(mapa);
     }
 
-    // Vetor de Srings com as missões do jogo.
-    char* Missoes [5] = {
-        "Conquistar 3 territorios seguidos",
-        "Conquistar 2 territorios seguidos",
-        "Conquiste pelo menos 1 territorio",
-        "Conquiste 2 territorios",
-        "Conquiste 4 territorios seguidos"
-    };
-
-// função para atribuir missão aleatóriamente a cada jogador.
-void atribuirMissao(char* Destino, char*Missoes[], int totalMissoes)
-{
-     int i = rand() % totalMissoes;
-     strcpy(Destino, Missoes[i]);
-
-     char* Missao;
-     Missao = malloc((strlen(Missoes[totalMissoes]) + 1) * sizeof(char));
-
-
-}
-    
        // INICIANDO A FUNÇÃO PRINCIPAL.
        int main() {
 
