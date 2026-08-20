@@ -54,29 +54,27 @@ void atacar(Territorio *atacante, Territorio *defensor)
         free(mapa);
     }
 
-
+    // Vetor de Srings com as missões do jogo.
     char* Missoes [5] = {
         "Conquistar 3 territorios seguidos",
         "Conquistar 2 territorios seguidos",
-        "Conquiste pelo menos 1 terriotorio",
+        "Conquiste pelo menos 1 territorio",
         "Conquiste 2 territorios",
-        "conquiste 4 territorios seguidos"
+        "Conquiste 4 territorios seguidos"
     };
 
+// função para atribuir missão aleatóriamente a cada jogador.
 void atribuirMissao(char* Destino, char*Missoes[], int totalMissoes)
 {
-     int totalMissoes;
+     int i = rand() % totalMissoes;
+     strcpy(Destino, Missoes[i]);
 
-     int totalMissoes = rand() %5 + 1;
+     char* Missao;
+     Missao = malloc((strlen(Missoes[totalMissoes]) + 1) * sizeof(char));
+
 
 }
     
-
-    
-   
-
-
-
        // INICIANDO A FUNÇÃO PRINCIPAL.
        int main() {
 
